@@ -3117,7 +3117,7 @@ ngx_http_upstream_check_status_prometheus_format(ngx_buf_t *b,
                 &peer[i].peer_addr->name,
                 &peer[i].conf->check_type_conf->name,
                 peer[i].conf->port,
-                peer[i].shm->down ? "down" : "up"
+                peer[i].shm->down
                 );
         b->last = ngx_snprintf(b->last, b->end - b->last,
                 "nginx_http_upstream_check_peer_probes{"
